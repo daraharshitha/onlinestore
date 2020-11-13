@@ -1,0 +1,21 @@
+<%- include('./includes/header') %>
+
+<body>
+  <%- include('./includes/navigation') %>
+
+  <h1>Product Details</h1>
+  <br />
+
+  <div class="card">
+    <h1><%= prod.name %></h1>
+    <p class="price"><%= prod.price %></p>
+    <p><%= prod.brand %></p>
+    <p><%= prod.rating %></p>
+    <button>Add to Cart</button>
+    <form action="/admin/products/<%= prod.id %>" method="DELETE">
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+
+  <%- include('./includes/footer') %>
+</body>
